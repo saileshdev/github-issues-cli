@@ -60,6 +60,7 @@ defmodule Issues.CLI do
     Issues.GithubIssues.fetch(user,project)
     |> decode_response
     |> convert_to_list_of_hashdicts
+    |> sort_into_ascending_order
 
   end
 
@@ -76,6 +77,11 @@ defmodule Issues.CLI do
   def convert_to_list_of_hashdicts(list) do
     list
     |> Enum.map(&Enum.into(&1, HashDict.new))
+  end
+
+  def sort_into_ascending_order(list_of_issues) do
+
+    Enum.sort list_of_issues, fn i1, i2 -> i1["created_at"] <= i2["created_at"] 
   end
 
 end
