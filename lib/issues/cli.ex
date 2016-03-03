@@ -8,6 +8,9 @@ defmodule Issues.CLI do
   github project
 
   """
+
+  import Issues.TableFormatter, only: [ print_table_for_columns: 2] 
+
   def run(argv) do
     
     argv
@@ -76,6 +79,7 @@ defmodule Issues.CLI do
     |> convert_to_list_of_hashdicts
     |> sort_into_ascending_order
     |> Enum.take(count)
+    |> print_table_for_columns(["number","created_at","title"])
 
   end
 
