@@ -1,20 +1,25 @@
-# Issues
+# Github Issues CLI
 
-**TODO: Add description**
+**Here is a command line executable to fetch issues from any github repo. Check it out! **
 
-## Installation
+![Demo](./demo/demo.gif)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+## Getting started
 
-  1. Add issues to your list of dependencies in `mix.exs`:
+In particular, as a first debugging check I suggest getting the test suite to pass on your local machine.
+Run mix test and ensure that the tests pass.
 
-        def deps do
-          [{:issues, "~> 0.0.1"}]
-        end
+1. git clone https://github.com/saileshdev/github-issues-cli.git
+2. cd github-issues-cli
+3. Run mix escript.build
 
-  2. Ensure issues is started before your application:
+##Contributing
 
-        def application do
-          [applications: [:issues]]
-        end
+Contribution is most welcome, that's the whole idea! Together as a community we can build cool products that can solve real life problems and make our lives easier.
+
+Please take a moment to review the [guidelines for contributing](CONTRIBUTING.md).
+
+* [Bug reports](CONTRIBUTING.md#bugs)
+* [Feature requests](CONTRIBUTING.md#features)
+* [Pull requests](CONTRIBUTING.md#pull-requests)
 
