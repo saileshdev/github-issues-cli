@@ -19,7 +19,11 @@ defmodule Issues.GithubIssues do
   {:ok, body}
   end
 
-  def handle_response({:error, %{status_code: status, body: body}}) do
+  def handle_response({:ok, %{status_code: _, body: body}}) do
+  {:error, body}
+  end
+  
+  def handle_response({:error, %{status_code: _status, body: body}}) do
   {:error, body}
   end
 
