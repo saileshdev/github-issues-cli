@@ -31,4 +31,9 @@ defmodule Issues.Mixfile do
       { :jsx, "~>2.0"}
     ]
   end
+
+  defp escript_config do
+    [ main_module: Issues.CLI ]
+  end
+
 end
