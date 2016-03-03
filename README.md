@@ -9,9 +9,11 @@
 In particular, as a first debugging check I suggest getting the test suite to pass on your local machine.
 Run mix test and ensure that the tests pass.
 
-1. git clone https://github.com/saileshdev/github-issues-cli.git
-2. cd github-issues-cli
-3. Run mix escript.build
+         git clone https://github.com/saileshdev/github-issues-cli.git 
+         cd github-issues-cli
+         mix deps.get
+         mix escript.build
+         ./issues <user-name> <project-name> no_of_issues_to_fetch
 
 ##Contributing
 
